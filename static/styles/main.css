@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: aliceblue;
+    color: black;
+
+}
+
+a {
+
+    text-decoration: none;
+    color: grey;
+}
+
+hr {
+    width: 75%;
+    margin: auto;
+}
+
+.nav {
+    position: relative;
+    height: 4rem;
+
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo img {
+    width: 3rem;
+}
+
+.nav-rest {
+    display: flex;
+    margin-right: 1rem;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 1rem;
+}
+
+.nav-search input {
+    margin-top: 0.5rem;
+    border-radius: 5px;
+}
+
+.feed {
+    gap: 1rem;
+}

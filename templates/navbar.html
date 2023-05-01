@@ -1,0 +1,23 @@
+{% load static %}
+<div class="nav">
+  <a href="/" class="logo"><img src="{% static 'images/logo.png' %}" /> </a>
+  <div class="nav-rest">
+    <form class="nav-search" method="GET" action="{% url 'home' %}">
+      <input type="text" placeholder="Search" name="q" />
+    </form>
+    <div class="nav-log">
+      <div class="nav-name">
+        {% if request.user.is_authenticated %}
+
+        <b><a href="{% url 'user-profile' user.id %}">{{user|capfirst}}</a> </b>
+      </div>
+      <div class="nav-register">
+        <a href="{% url 'logout' %}">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+<hr />
